@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="chooseLevelPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Menus.ChooseLevelSceneController">
+   <children>
+      <ImageView fx:id="background" fitHeight="540.0" fitWidth="960.0" pickOnBounds="true" scaleZ="0.0">
+         <image>
+            <Image url="@../resources/background.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="119.0" layoutX="282.0" layoutY="180.0" opacity="0.65" stroke="BLACK" strokeType="INSIDE" width="453.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="111.0" layoutX="282.0" layoutY="40.0" opacity="0.65" stroke="BLACK" strokeType="INSIDE" width="453.0" />
+      <ImageView fx:id="storyOneImage" fitHeight="119.0" fitWidth="217.0" layoutX="41.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/story1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="storyTwoImage" fitHeight="119.0" fitWidth="217.0" layoutX="41.0" layoutY="180.0" pickOnBounds="true">
+         <image>
+            <Image url="@../resources/Story2.png" />
+         </image>
+      </ImageView>
+      <RadioButton fx:id="storyOneRadio" layoutX="299.0" layoutY="49.0" mnemonicParsing="false" text="Story 1" />
+      <RadioButton fx:id="storyTwoRadio" layoutX="299.0" layoutY="185.0" mnemonicParsing="false" text="Story 2 " />
+      <ImageView fx:id="backButton" fitHeight="150.0" fitWidth="200.0" layoutX="41.0" layoutY="400.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/backButton.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="startButton" fitHeight="150.0" fitWidth="200.0" layoutX="735.0" layoutY="400.0" onMouseClicked="#startGame" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/startButton.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="299.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A farmer wants to cross a river and take with him a carnivorous, a herbivorous and plant" wrappingWidth="408.1367540359497" />
+      <Text layoutX="299.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Four farmers and their animal need to cross a river in a small boat. The weights of thefarmers are 90 kg, 80 kg,60 kg and 40 kg respectively, and the weight of the animal is 20 kg" wrappingWidth="408.1367492675782" />
+      <RadioButton fx:id="stroyThreeRadio" layoutX="299.0" layoutY="319.0" mnemonicParsing="false" text="Stroy 3" />
+   </children>
+</AnchorPane>

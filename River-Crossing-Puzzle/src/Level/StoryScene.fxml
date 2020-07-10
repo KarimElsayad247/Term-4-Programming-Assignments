@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Level.StorySceneController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="378.0" layoutX="-29.0" layoutY="-25.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1009.0">
+         <fill>
+            <LinearGradient endX="0.003816794803124348" endY="0.9351145065467776">
+               <stops>
+                  <Stop color="#33aad6" />
+                  <Stop color="#47ffeba3" offset="0.9938931297709924" />
+                  <Stop color="#47ffeba3" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0bb6ff" height="272.0" layoutX="172.0" layoutY="285.0" stroke="TRANSPARENT" strokeType="INSIDE" width="530.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b97a57" height="312.0" layoutX="629.0" layoutY="238.0" smooth="false" stroke="TRANSPARENT" strokeType="OUTSIDE" width="362.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#22b14c" height="50.0" layoutX="629.0" layoutY="235.0" stroke="#11ff0029" strokeType="INSIDE" width="405.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b97a57" height="312.0" layoutX="-37.0" layoutY="238.0" smooth="false" stroke="TRANSPARENT" strokeType="OUTSIDE" width="362.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#22b14c" height="50.0" layoutX="-80.0" layoutY="235.0" stroke="#11ff0029" strokeType="INSIDE" width="405.0" />
+      <ImageView fx:id="carniViewLeft" fitHeight="69.0" fitWidth="66.0" layoutX="41.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="plantViewLeft" fitHeight="50.0" fitWidth="75.0" layoutX="182.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="herbiViewLeft" fitHeight="61.0" fitWidth="75.0" layoutX="107.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="418.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#tryCrossing" prefHeight="43.0" prefWidth="115.0" text="Sail!" textAlignment="CENTER" />
+      <HBox fx:id="leftBankHbox" alignment="CENTER_RIGHT" layoutX="7.0" layoutY="155.0" prefHeight="100.0" prefWidth="318.0" />
+      <HBox fx:id="rightBankHbox" alignment="CENTER_LEFT" layoutX="629.0" layoutY="155.0" prefHeight="100.0" prefWidth="318.0" />
+      <HBox fx:id="river" alignment="BOTTOM_RIGHT" layoutX="326.0" layoutY="188.0" prefHeight="100.0" prefWidth="304.0">
+         <children>
+            <AnchorPane prefHeight="100.0" prefWidth="94.0">
+               <children>
+                  <ImageView fx:id="boatSpotTwo" fitHeight="61.0" fitWidth="49.0" layoutY="41.0" onMouseClicked="#removeCrossersFromBoat" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="Boat" fitHeight="50.0" fitWidth="115.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/boat-art-right.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="boatSpotOne" fitHeight="61.0" fitWidth="49.0" layoutX="49.0" layoutY="43.0" onMouseClicked="#removeCrossersFromBoat" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+         </children></HBox>
+      <Label fx:id="scoreLabel" layoutX="443.0" layoutY="57.0" prefHeight="25.0" prefWidth="75.0" text="Sails:" />
+      <Button fx:id="backToChooseButton" layoutX="856.0" layoutY="14.0" mnemonicParsing="false" onAction="#returnToChooseLevel" prefHeight="25.0" prefWidth="90.0" text="Back to Menu" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+         <font>
+            <Font size="12.0" />
+         </font></Button>
+      <HBox layoutX="-3.0" layoutY="5.0" prefHeight="61.0" prefWidth="220.0" spacing="5.0">
+         <children>
+            <Button fx:id="loadButton" alignment="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#loadGame" prefHeight="42.0" prefWidth="27.0" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/load.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="saveButton" alignment="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#saveGame" prefHeight="43.0" prefWidth="42.0" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/save.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="redoButton" mnemonicParsing="false" onAction="#redoLastAction" prefHeight="43.0" prefWidth="31.0">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/redo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="undoButton" alignment="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#undoLastAction" prefHeight="43.0" prefWidth="42.0" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/undo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding></HBox>
+      <Button fx:id="solveGameButton" layoutX="856.0" layoutY="45.0" mnemonicParsing="false" onAction="#solveGame" prefHeight="25.0" prefWidth="90.0" text="Solve Game!" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="754.0" layoutY="14.0" mnemonicParsing="false" onAction="#resetGame" prefHeight="25.0" prefWidth="90.0" text="Reset">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="informationButton" layoutX="896.0" layoutY="451.0" mnemonicParsing="false" onAction="#getInstructions" prefHeight="42.0" prefWidth="50.0">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/information.png" />
+               </image></ImageView>
+         </graphic></Button>
+   </children>
+</AnchorPane>

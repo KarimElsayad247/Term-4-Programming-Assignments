@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Menus.MainMenuSceneController">
+   <children>
+      <ImageView fx:id="background" fitHeight="540.0" fitWidth="960.0" pickOnBounds="true">
+         <image>
+            <Image url="@../resources/background.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="playButton" fitHeight="80.0" fitWidth="200.0" layoutX="380.0" layoutY="348.0" onMouseClicked="#startGame" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../src/resources/playButton.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="274.0" fitWidth="585.0" layoutX="188.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/title.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
